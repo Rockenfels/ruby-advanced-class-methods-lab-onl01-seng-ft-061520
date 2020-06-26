@@ -48,7 +48,7 @@ class Song
     return @@all.sort_by{|song| song.name}
   end
   
-  def new_from_filename(file_name)
+  def self.new_from_filename(file_name)
     data = file_name.split("-")
     title = data[1].lstrip
     title = title.slice(0, title.length-4)
