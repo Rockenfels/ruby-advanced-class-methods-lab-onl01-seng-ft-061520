@@ -56,7 +56,7 @@ class Song
     
     song = self.new_by_name(title)
     song.artist_name = artist
-    
+    binding.pry
     song
   end
   
