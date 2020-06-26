@@ -45,7 +45,9 @@ class Song
   end
   
   def self.alphabetical
-    return @@all.sort_by {|word| word[0]}
+    binding.pry
+    return @@all.sort
+    
   end
   
   def new_from_filename(file_name)
