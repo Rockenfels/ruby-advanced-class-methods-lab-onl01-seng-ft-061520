@@ -51,7 +51,7 @@ class Song
   def self.new_from_filename(file_name)
     data = file_name.split("-")
     title = data[1].slice(1, data[1].length-5)
-    artist = data[0].slice(0, data[0].length-2)
+    artist = data[0].slice(0, data[0].length-1)
     
     song = self.new_by_name(title)
     song.artist_name = artist
