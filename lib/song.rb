@@ -33,8 +33,9 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-    if @@all.find_by_name(name)
-      return @@all[name]
+    test = @@all.find_by_name(name)
+    if test !== nil
+      return test
     else
       song = create_by_name(name)
       return song
