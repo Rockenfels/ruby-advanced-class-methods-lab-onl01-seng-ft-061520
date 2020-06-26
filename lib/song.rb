@@ -50,9 +50,8 @@ class Song
   
   def self.new_from_filename(file_name)
     data = file_name.split("-")
-    title = data[1].lstrip
-    title = title.slice(0, title.length-4).lstrip
-    artist = data[0]
+    title = data[1].slice(1, data[1].length-4)
+    artist = data[0].slice(0, data[0].length-2)
     
     song = self.new_by_name(title)
     song.artist_name = artist
